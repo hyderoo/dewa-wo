@@ -62,12 +62,7 @@ export default function About({ auth }) {
                         </h2>
                         <div className="prose mx-auto text-gray-600 space-y-6 text-center max-w-3xl">
                             <p className="leading-relaxed">
-                                Dewa Management adalah penyedia jasa wedding organizer
-                                profesional yang berdedikasi untuk menciptakan momen pernikahan
-                                yang tak terlupakan. Dengan pengalaman dan keahlian kami, kami
-                                berkomitmen untuk menghadirkan sentuhan elegan dalam setiap
-                                detail pernikahan Anda.
-                            </p>
+                                Dewa Management Group merupakan salah satu jasa Event & Wedding Organizer yang mempunyai karakteristik Traditional Elegant (Menyatukan tradisi dengan modernisasi, namun tetap menjaga esensi dari nilai-nilai itu sendiri), selalu mengutamakan kepentigan klien, fleksibel, dan transparansi </p>
                         </div>
                     </div>
                 </section>
@@ -79,21 +74,19 @@ export default function About({ auth }) {
                             <div className="text-center">
                                 <h3 className={`text-2xl mb-6 ${cormorantClass}`}>Visi</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Menjadi wedding organizer terpercaya yang menghadirkan
-                                    kebahagiaan dan kesempurnaan dalam setiap momen pernikahan
-                                    klien kami.
+                                    Menjadi pilihan utama dalam penyelenggaraan event dan pernikahan yang mengedepankan keindahan dan tradisi dan modernitas, dengan pelayanan yang professional, fleksibel, dan transparan sesuai dengan kebutuhan setiap klien
                                 </p>
                             </div>
                             <div className="text-center">
                                 <h3 className={`text-2xl mb-6 ${cormorantClass}`}>Misi</h3>
                                 <ul className="text-gray-600 space-y-4 list-none p-0">
                                     <li>
-                                        Memberikan pelayanan profesional dan berkualitas tinggi
+                                        Menyelenggarakan event pernikahan dengan konsep Traditional Elegant.
                                     </li>
-                                    <li>Menciptakan konsep pernikahan yang unik dan personal</li>
-                                    <li>Menjalin hubungan yang baik dengan klien dan vendor</li>
+                                    <li>Memberikan pelayanan yang nyaman,aman dan professional</li>
+                                    <li>Menyediakan solusi fleksibel sesuai kebutuhan dan anggaran klien</li>
                                     <li>
-                                        Mengutamakan kepuasan klien dalam setiap aspek layanan
+                                        Mengutamakan transparansi dan kepuasan klien di setiap acara
                                     </li>
                                 </ul>
                             </div>
