@@ -20,6 +20,7 @@ const TermsConditionsManagementContent = ({ termsConditions, version }) => {
     // Editor setup
     const editor = useEditor({
         extensions: [StarterKit],
+        shouldRerenderOnTransaction: true,
         content: data.content,
         onUpdate: ({ editor }) => {
             setData('content', editor.getHTML());
