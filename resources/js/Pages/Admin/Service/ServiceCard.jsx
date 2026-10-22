@@ -4,10 +4,10 @@ import { iconMap } from "./IconSelector";
 
 const ServiceCard = ({ service, onEdit, onDelete, onToggleStatus }) => {
     return (
-        <div className={`bg-white rounded-lg border ${service.is_active ? 'border-gray-200' : 'border-red-200 bg-red-50'} shadow-sm overflow-hidden hover:shadow-md transition-shadow`}>
+        <div className={`bg-white rounded-lg border ${service.is_active ? 'border-gray-200' : 'border-red-200 bg-red-50'} shadow-xs overflow-hidden hover:shadow-md transition-shadow`}>
             <div className="p-5 flex items-start justify-between">
                 <div className="flex">
-                    <div className="mr-4 flex-shrink-0">
+                    <div className="mr-4 shrink-0">
                         <div className="h-12 w-12 flex items-center justify-center rounded-full bg-pink-100 text-pink-600">
                             {iconMap[service.icon] || <Star />}
                         </div>

@@ -159,7 +159,7 @@ const History = ({ order, payments, auth, toast }) => {
                                     }`}
                             >
                                 <div className="flex">
-                                    <div className="flex-shrink-0">
+                                    <div className="shrink-0">
                                         {toastMessage.type === "success" ? (
                                             <CheckCircle className="h-5 w-5 text-green-500" />
                                         ) : toastMessage.type === "error" ? (
@@ -184,7 +184,7 @@ const History = ({ order, payments, auth, toast }) => {
                                         <div className="-mx-1.5 -my-1.5">
                                             <button
                                                 onClick={() => setShowToast(false)}
-                                                className="inline-flex rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                                                className="inline-flex rounded-md p-1.5 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                                             >
                                                 <XCircle className="h-5 w-5 text-gray-500" />
                                             </button>
@@ -236,7 +236,7 @@ const History = ({ order, payments, auth, toast }) => {
 
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                             {/* Header */}
-                            <div className="bg-gradient-to-r from-purple-500 to-indigo-500 p-6 text-white">
+                            <div className="bg-linear-to-r from-purple-500 to-indigo-500 p-6 text-white">
                                 <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center">
                                     <div>
                                         <h1 className={`${cormorantBoldClass} text-2xl font-bold`}>Riwayat Pembayaran</h1>
@@ -288,7 +288,7 @@ const History = ({ order, payments, auth, toast }) => {
                                     {order.remaining_amount > 0 && (
                                         <Link
                                             href={route("payment.detail", order.id)}
-                                            className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-700 focus:outline-none"
+                                            className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-700 focus:outline-hidden"
                                         >
                                             <DollarSign className="h-4 w-4 mr-1" />
                                             Tambah Pembayaran
@@ -603,7 +603,7 @@ const History = ({ order, payments, auth, toast }) => {
                                         <div className="mt-6">
                                             <Link
                                                 href={route("payment.detail", order.id)}
-                                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none"
+                                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-xs text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-hidden"
                                             >
                                                 <DollarSign className="-ml-1 mr-2 h-5 w-5" />
                                                 Buat Pembayaran

@@ -51,7 +51,7 @@ const ServiceFormModal = ({
                                 name="type"
                                 value={data.type}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                             >
                                 <option value="premium">Premium Feature</option>
                                 <option value="additional">Additional Service</option>
@@ -68,7 +68,7 @@ const ServiceFormModal = ({
                                 name="title"
                                 value={data.title}
                                 onChange={handleInputChange}
-                                className={`w-full px-3 py-2 border ${errors.title ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                className={`w-full px-3 py-2 border ${errors.title ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                 placeholder="Enter service title"
                             />
                             {errors.title && (
@@ -84,7 +84,7 @@ const ServiceFormModal = ({
                                 name="description"
                                 value={data.description}
                                 onChange={handleInputChange}
-                                className={`w-full px-3 py-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                className={`w-full px-3 py-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                 rows={3}
                                 placeholder="Enter service description"
                             />
@@ -121,7 +121,7 @@ const ServiceFormModal = ({
                                     name="is_active"
                                     checked={data.is_active}
                                     onChange={handleInputChange}
-                                    className="h-4 w-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                                    className="h-4 w-4 text-pink-600 border-gray-300 rounded-sm focus:ring-pink-500"
                                 />
                                 <span className="ml-2 text-sm text-gray-700">Active (visible on website)</span>
                             </label>
@@ -144,7 +144,7 @@ const ServiceFormModal = ({
                             type="submit"
                             form="serviceForm"
                             disabled={processing}
-                            className="px-6 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
+                            className="px-6 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
                         >
                             <Save className="w-4 h-4 mr-2" />
                             {processing ? 'Processing...' : editingService ? "Update" : "Save"}

@@ -233,7 +233,7 @@ const UserManagementContent = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 md:p-8">
+                    <div className="bg-linear-to-r from-blue-500 to-indigo-600 p-6 md:p-8">
                         <h1 className="font-cormorant text-3xl md:text-4xl font-light text-white text-center tracking-wide">
                             User Management
                         </h1>
@@ -258,7 +258,7 @@ const UserManagementContent = () => {
                             {/* Add User Button */}
                             <button
                                 onClick={handleAddUser}
-                                className="w-full md:w-auto bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                                className="w-full md:w-auto bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                             >
                                 <Plus className="w-4 h-4 mr-2 inline-block" />
                                 Add New User

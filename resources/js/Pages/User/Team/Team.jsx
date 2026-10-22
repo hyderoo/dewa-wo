@@ -49,7 +49,7 @@ export default function Team() {
                     <div className="mt-10">
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                             {team.map((member, index) => (
-                                <div key={index} className="bg-white overflow-hidden shadow rounded-lg">
+                                <div key={index} className="bg-white overflow-hidden shadow-sm rounded-lg">
                                     <div className="aspect-w-1 aspect-h-1">
                                         <img
                                             src={member.image || `/api/placeholder/400/400?text=${encodeURIComponent(member.name)}`}

@@ -127,14 +127,14 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                 </div>
 
                 {error && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4 flex items-center">
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative mb-4 flex items-center">
                         <AlertCircle className="w-5 h-5 mr-2" />
                         <span>{error}</span>
                     </div>
                 )}
 
                 {success && (
-                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4 flex items-center">
+                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-sm relative mb-4 flex items-center">
                         <ShieldCheck className="w-5 h-5 mr-2" />
                         <span>{success}</span>
                     </div>
@@ -149,7 +149,7 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                             type={showCurrentPassword ? "text" : "password"}
                             value={currentPassword}
                             onChange={(e) => setCurrentPassword(e.target.value)}
-                            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-none"
+                            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-hidden"
                             placeholder="Masukkan kata sandi saat ini"
                         />
                         <button
@@ -171,7 +171,7 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                             type={showNewPassword ? "text" : "password"}
                             value={newPassword}
                             onChange={handleNewPasswordChange}
-                            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-none"
+                            className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-hidden"
                             placeholder="Masukkan kata sandi baru"
                         />
                         <button
@@ -245,7 +245,7 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                             type={showConfirmPassword ? "text" : "password"}
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
-                            className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-none ${confirmPassword && newPassword !== confirmPassword ? 'border-red-500' : ''
+                            className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-pink-300 focus:outline-hidden ${confirmPassword && newPassword !== confirmPassword ? 'border-red-500' : ''
                                 }`}
                             placeholder="Konfirmasi kata sandi baru"
                         />
@@ -265,7 +265,7 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                 <div className="flex justify-center space-x-4">
                     <button
                         onClick={onClose}
-                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
+                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors focus:outline-hidden focus:ring-2 focus:ring-gray-400"
                         disabled={loading}
                     >
                         Batal
@@ -273,7 +273,7 @@ const PasswordChangeModal = ({ isOpen, onClose }) => {
                     <button
                         onClick={handlePasswordChange}
                         disabled={loading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword}
-                        className={`px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-400 flex items-center ${loading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword
+                        className={`px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors focus:outline-hidden focus:ring-2 focus:ring-pink-400 flex items-center ${loading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword
                             ? 'opacity-50 cursor-not-allowed'
                             : ''
                             }`}

@@ -323,7 +323,7 @@ const Detail = () => {
                                                 onChange={handleAmountChange}
                                                 min="1"
                                                 max={order.remaining_amount}
-                                                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                 placeholder="0"
                                                 required
                                             />
@@ -536,7 +536,7 @@ const Detail = () => {
                                             {data.bank_code && (
                                                 <div className="mt-4">
                                                     <div className="p-4 bg-blue-50 rounded-lg flex items-start">
-                                                        <AlertTriangle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                                                        <AlertTriangle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 shrink-0" />
                                                         <div>
                                                             <p className="font-medium text-blue-700">Informasi Virtual Account</p>
                                                             <p className="text-sm text-blue-600 mt-1">

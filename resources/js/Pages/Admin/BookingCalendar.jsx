@@ -180,7 +180,7 @@ const BookingCalendar = ({ bookedDates }) => {
     const weekdays = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
 
     return (
-        <div className="bg-white rounded-xl shadow-sm p-6">
+        <div className="bg-white rounded-xl shadow-xs p-6">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-semibold text-gray-800 flex items-center">
                     <Calendar className="mr-2 h-5 w-5 text-pink-500" />
@@ -225,7 +225,7 @@ const BookingCalendar = ({ bookedDates }) => {
                     <div className="font-medium text-gray-900 mb-1">{hoveredEvent.client}</div>
                     <div className="text-sm text-gray-600 mb-1">{formatDate(new Date(hoveredEvent.date))}</div>
                     <div className="text-sm text-gray-600 mb-2">{hoveredEvent.venue}</div>
-                    <div className={`text-xs inline-block px-2 py-1 rounded ${getStatusColorClass(hoveredEvent.status)}`}>
+                    <div className={`text-xs inline-block px-2 py-1 rounded-sm ${getStatusColorClass(hoveredEvent.status)}`}>
                         {hoveredEvent.status}
                     </div>
                 </div>
@@ -246,7 +246,7 @@ const BookingCalendar = ({ bookedDates }) => {
                                         <div className="font-medium text-gray-900 mb-1">{event.client}</div>
                                         <div className="text-sm text-gray-600 mb-1">{event.venue}</div>
                                         <div className="text-sm text-gray-600 mb-2">Order #{event.orderNumber}</div>
-                                        <div className={`text-xs inline-block px-2 py-1 rounded ${getStatusColorClass(event.status)}`}>
+                                        <div className={`text-xs inline-block px-2 py-1 rounded-sm ${getStatusColorClass(event.status)}`}>
                                             {event.status}
                                         </div>
                                     </div>
@@ -266,19 +266,19 @@ const BookingCalendar = ({ bookedDates }) => {
                 <div className="text-sm text-gray-600 mb-2">Status:</div>
                 <div className="flex flex-wrap gap-2">
                     <div className="flex items-center">
-                        <div className="w-4 h-4 bg-blue-500 rounded-sm mr-2"></div>
+                        <div className="w-4 h-4 bg-blue-500 rounded-xs mr-2"></div>
                         <span className="text-sm">Active</span>
                     </div>
                     <div className="flex items-center">
-                        <div className="w-4 h-4 bg-yellow-500 rounded-sm mr-2"></div>
+                        <div className="w-4 h-4 bg-yellow-500 rounded-xs mr-2"></div>
                         <span className="text-sm">Pending</span>
                     </div>
                     <div className="flex items-center">
-                        <div className="w-4 h-4 bg-green-500 rounded-sm mr-2"></div>
+                        <div className="w-4 h-4 bg-green-500 rounded-xs mr-2"></div>
                         <span className="text-sm">Completed</span>
                     </div>
                     <div className="flex items-center">
-                        <div className="w-4 h-4 bg-red-500 rounded-sm mr-2"></div>
+                        <div className="w-4 h-4 bg-red-500 rounded-xs mr-2"></div>
                         <span className="text-sm">Cancelled</span>
                     </div>
                 </div>

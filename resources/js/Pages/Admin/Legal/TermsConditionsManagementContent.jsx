@@ -68,7 +68,7 @@ const TermsConditionsManagementContent = ({ termsConditions, version }) => {
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-6 md:p-8">
+                    <div className="bg-linear-to-r from-pink-500 to-rose-500 p-6 md:p-8">
                         <h1 className="font-cormorant text-3xl md:text-4xl font-light text-white text-center tracking-wide">
                             Manajemen Syarat & Ketentuan
                         </h1>
@@ -94,7 +94,7 @@ const TermsConditionsManagementContent = ({ termsConditions, version }) => {
                                     type="text"
                                     value={data.version}
                                     onChange={(e) => setData('version', e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                                 />
                                 {errors.version && (
                                     <p className="text-red-500 text-xs mt-1">{errors.version}</p>

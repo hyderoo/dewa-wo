@@ -218,7 +218,7 @@ export default function Portfolio({ portfolioItems }) {
                             {/* Image Container */}
                             <div
                                 className={`
-                                    flex-grow flex items-center justify-center
+                                    grow flex items-center justify-center
                                     ${isFullscreen ? "h-full" : "max-h-[60vh]"}
                                     ${isFullscreen ? "bg-transparent" : "bg-black"} relative
                                 `}
@@ -283,7 +283,7 @@ export default function Portfolio({ portfolioItems }) {
                                             className={`
                                                 cursor-pointer mx-1 border-2 rounded overflow-hidden
                                                 ${idx === currentImageIndex ? "border-pink-500" : "border-transparent"}
-                                                flex-shrink-0
+                                                shrink-0
                                             `}
                                             onClick={(e) => {
                                                 e.stopPropagation();

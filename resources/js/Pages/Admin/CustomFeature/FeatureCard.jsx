@@ -29,14 +29,14 @@ const FeatureCard = ({ feature, onEdit, onDelete }) => {
             <div className="flex gap-2">
                 <button
                     onClick={() => onEdit(feature)}
-                    className="flex-1 px-3 py-1.5 bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors flex items-center justify-center gap-1"
+                    className="flex-1 px-3 py-1.5 bg-gray-100 text-gray-600 rounded-sm hover:bg-gray-200 transition-colors flex items-center justify-center gap-1"
                 >
                     <Edit2 className="h-4 w-4" />
                     Edit
                 </button>
                 <button
                     onClick={() => onDelete(feature)}
-                    className="flex-1 px-3 py-1.5 bg-red-50 text-red-600 rounded hover:bg-red-100 transition-colors flex items-center justify-center gap-1"
+                    className="flex-1 px-3 py-1.5 bg-red-50 text-red-600 rounded-sm hover:bg-red-100 transition-colors flex items-center justify-center gap-1"
                 >
                     <Trash2 className="h-4 w-4" />
                     Hapus

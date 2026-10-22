@@ -8,7 +8,7 @@ const Toolbar = ({ editor }) => {
             <button
                 type="button"
                 onClick={() => editor.chain().focus().toggleBold().run()}
-                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('bold') ? 'bg-gray-200' : ''}`}
+                className={`p-2 rounded-sm hover:bg-gray-200 ${editor.isActive('bold') ? 'bg-gray-200' : ''}`}
                 title="Bold"
             >
                 <strong>B</strong>
@@ -16,7 +16,7 @@ const Toolbar = ({ editor }) => {
             <button
                 type="button"
                 onClick={() => editor.chain().focus().toggleItalic().run()}
-                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('italic') ? 'bg-gray-200' : ''}`}
+                className={`p-2 rounded-sm hover:bg-gray-200 ${editor.isActive('italic') ? 'bg-gray-200' : ''}`}
                 title="Italic"
             >
                 <em>I</em>
@@ -24,7 +24,7 @@ const Toolbar = ({ editor }) => {
             <button
                 type="button"
                 onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 1 }) ? 'bg-gray-200' : ''}`}
+                className={`p-2 rounded-sm hover:bg-gray-200 ${editor.isActive('heading', { level: 1 }) ? 'bg-gray-200' : ''}`}
                 title="Heading 1"
             >
                 H1
@@ -32,7 +32,7 @@ const Toolbar = ({ editor }) => {
             <button
                 type="button"
                 onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 2 }) ? 'bg-gray-200' : ''}`}
+                className={`p-2 rounded-sm hover:bg-gray-200 ${editor.isActive('heading', { level: 2 }) ? 'bg-gray-200' : ''}`}
                 title="Heading 2"
             >
                 H2
@@ -40,7 +40,7 @@ const Toolbar = ({ editor }) => {
             <button
                 type="button"
                 onClick={() => editor.chain().focus().toggleBulletList().run()}
-                className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('bulletList') ? 'bg-gray-200' : ''}`}
+                className={`p-2 rounded-sm hover:bg-gray-200 ${editor.isActive('bulletList') ? 'bg-gray-200' : ''}`}
                 title="Bullet List"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

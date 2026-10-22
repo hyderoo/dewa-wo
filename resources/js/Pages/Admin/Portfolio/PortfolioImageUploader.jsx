@@ -41,7 +41,7 @@ const PortfolioImageUploader = ({
                 <button
                     type="button"
                     onClick={() => fileInputRef.current.click()}
-                    className="px-3 py-1 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-500 inline-flex items-center text-sm"
+                    className="px-3 py-1 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-hidden focus:ring-2 focus:ring-pink-500 inline-flex items-center text-sm"
                 >
                     <Plus className="w-3 h-3 mr-1" />
                     Add Images
@@ -158,7 +158,7 @@ const PortfolioImageUploader = ({
                                 <div
                                     key={img.id}
                                     onClick={() => setCurrentImageIndex(idx)}
-                                    className={`relative flex-shrink-0 w-16 h-16 rounded-md overflow-hidden cursor-pointer border-2 ${currentImageIndex === idx ? 'border-pink-500' : 'border-transparent'
+                                    className={`relative shrink-0 w-16 h-16 rounded-md overflow-hidden cursor-pointer border-2 ${currentImageIndex === idx ? 'border-pink-500' : 'border-transparent'
                                         } ${imagesToDelete.includes(img.id) ? 'opacity-40' : ''}`}
                                 >
                                     <img

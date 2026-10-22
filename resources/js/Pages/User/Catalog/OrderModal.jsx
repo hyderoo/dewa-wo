@@ -372,7 +372,7 @@ const OrderModal = ({ service, onClose }) => {
                                             onChange={handleChange}
                                             placeholder="Contoh: Budi & Ani"
                                             required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                         {errors.client_name && (
                                             <p className="text-red-500 text-xs mt-1">{errors.client_name}</p>
@@ -397,7 +397,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 onClick={openDatePicker}
                                                 className={`
                                                     w-full px-3 py-2 border rounded-md text-sm
-                                                    focus:outline-none focus:ring-2 text-left
+                                                    focus:outline-hidden focus:ring-2 text-left
                                                     flex items-center justify-between relative
                                                     ${dateError ? 'border-red-300 focus:ring-red-500' : 'focus:ring-pink-500'}
                                                     ${!formData.event_date ? 'text-gray-500' : 'text-gray-900'}
@@ -441,7 +441,7 @@ const OrderModal = ({ service, onClose }) => {
 
                                             {dateError && (
                                                 <div className="mt-1 flex items-center text-red-500 text-xs">
-                                                    <AlertCircle className="h-3 w-3 mr-1 flex-shrink-0" />
+                                                    <AlertCircle className="h-3 w-3 mr-1 shrink-0" />
                                                     <span>{dateError}</span>
                                                 </div>
                                             )}
@@ -460,7 +460,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 onChange={handleChange}
                                                 placeholder="Masukkan perkiraan jumlah tamu"
                                                 required
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             />
                                             {errors.estimated_guests && (
                                                 <p className="text-red-500 text-xs mt-1">{errors.estimated_guests}</p>
@@ -477,7 +477,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 onChange={handleChange}
                                                 placeholder="Nama gedung/tempat acara"
                                                 // required
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 mb-2"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500 mb-2"
                                             />
                                             {errors.venue && (
                                                 <p className="text-red-500 text-xs mt-1">{errors.venue}</p>
@@ -489,7 +489,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 placeholder="Alamat lengkap lokasi"
                                                 //required
                                                 rows={2}
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             />
                                         </div>
                                     </div>
@@ -511,7 +511,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             />
                                             {errors.email && (
                                                 <p className="text-red-500 text-xs mt-1">{errors.email}</p>
@@ -527,7 +527,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             />
                                             {errors.phone && (
                                                 <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
@@ -542,7 +542,7 @@ const OrderModal = ({ service, onClose }) => {
                                                 name="alt_phone"
                                                 value={formData.alt_phone}
                                                 onChange={handleChange}
-                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             />
                                         </div>
                                     </div>

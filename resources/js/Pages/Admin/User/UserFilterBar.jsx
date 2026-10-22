@@ -20,7 +20,7 @@ const UserFilterBar = ({
                     </div>
                     <input
                         type="text"
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                         placeholder="Search users..."
                         value={searchTerm}
                         onChange={onSearchChange}
@@ -63,7 +63,7 @@ const UserFilterBar = ({
 
                 {/* Per Page Selection */}
                 <select
-                    className="block w-24 px-3 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    className="block w-24 px-3 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-hidden focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     value={perPage}
                     onChange={onPerPageChange}
                 >

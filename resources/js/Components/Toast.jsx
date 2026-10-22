@@ -22,7 +22,7 @@ const Toast = ({ message, type = 'success', duration = 3000, onClose }) => {
 
     return (
         <div className="fixed top-4 right-4 z-50 animate-fade-in-down">
-            <div className={`${bgColor} px-4 py-3 rounded border-l-4 shadow-md max-w-md`}>
+            <div className={`${bgColor} px-4 py-3 rounded-sm border-l-4 shadow-md max-w-md`}>
                 <div className="flex items-center">
                     {type === 'success' && (
                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">

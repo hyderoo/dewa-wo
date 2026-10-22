@@ -79,7 +79,7 @@ const PortfolioManagementContent = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-6 md:p-8">
+                    <div className="bg-linear-to-r from-pink-500 to-rose-500 p-6 md:p-8">
                         <h1 className="font-cormorant text-3xl md:text-4xl font-light text-white text-center tracking-wide">
                             Manajemen Portfolio
                         </h1>
@@ -93,7 +93,7 @@ const PortfolioManagementContent = () => {
                         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
                             <button
                                 onClick={() => openModal()}
-                                className="w-full md:w-auto bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                                className="w-full md:w-auto bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
                             >
                                 <PlusCircle className="w-4 h-4 mr-2 inline-block" />
                                 Tambah Portfolio

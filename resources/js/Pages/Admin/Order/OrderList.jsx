@@ -141,7 +141,7 @@ const OrderList = ({
     }, 0);
 
     return (
-        <div className="bg-white rounded-lg shadow overflow-hidden">
+        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             {/* Filters & Search */}
             <div className="p-4 border-b border-gray-200 bg-gray-50">
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -152,7 +152,7 @@ const OrderList = ({
                             placeholder="Cari pesanan..."
                             value={activeFilters.search}
                             onChange={handleSearchChange}
-                            className="w-full md:w-60 lg:w-80 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            className="w-full md:w-60 lg:w-80 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                         />
                     </div>
 
@@ -180,7 +180,7 @@ const OrderList = ({
                 </div>
 
                 {isFilterOpen && (
-                    <div className="mt-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <div className="mt-4 p-4 bg-white rounded-lg border border-gray-200 shadow-xs">
                         <div className="flex justify-between items-center mb-3">
                             <h3 className="font-medium text-gray-700">Filter Lanjutan</h3>
                             <button onClick={() => setIsFilterOpen(false)} className="text-gray-400 hover:text-gray-500">
@@ -194,7 +194,7 @@ const OrderList = ({
                                 <select
                                     value={activeFilters.status}
                                     onChange={(e) => handleFilterChange('status', e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                 >
                                     <option value="all">Semua Status</option>
                                     <option value="pending_payment">Menunggu Pembayaran</option>
@@ -209,7 +209,7 @@ const OrderList = ({
                                 <select
                                     value={activeFilters.date}
                                     onChange={(e) => handleFilterChange('date', e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                 >
                                     <option value="all">Semua Waktu</option>
                                     <option value="past">Masa Lalu</option>
@@ -302,7 +302,7 @@ const OrderList = ({
                                         {/* Show discount if applicable */}
                                         {order.hasDiscount && (
                                             <div className="mt-2">
-                                                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-pink-100 text-pink-800">
+                                                <span className="inline-flex items-center px-2 py-1 rounded-sm text-xs font-medium bg-pink-100 text-pink-800">
                                                     Diskon {order.formattedDiscountPercent}
                                                 </span>
                                                 <span className="ml-2 text-xs text-gray-500 line-through">
@@ -512,7 +512,7 @@ const OrderList = ({
                             </p>
                         </div>
                         <div>
-                            <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <nav className="relative z-0 inline-flex rounded-md shadow-xs -space-x-px" aria-label="Pagination">
                                 <button
                                     onClick={() => onPageChange(pagination.current_page - 1)}
                                     disabled={!pagination.prev_page_url}

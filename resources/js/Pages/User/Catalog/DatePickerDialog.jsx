@@ -221,19 +221,19 @@ const DatePickerDialog = ({
                     {/* Legend */}
                     <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4">
                         <div className="flex items-center space-x-2">
-                            <div className="w-4 h-4 bg-gray-100 rounded"></div>
+                            <div className="w-4 h-4 bg-gray-100 rounded-sm"></div>
                             <span className="text-sm text-gray-600">Sudah Berlalu</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <div className="w-4 h-4 bg-red-100 rounded"></div>
+                            <div className="w-4 h-4 bg-red-100 rounded-sm"></div>
                             <span className="text-sm text-gray-600">Sudah Dipesan</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <div className="w-4 h-4 bg-green-50 rounded"></div>
+                            <div className="w-4 h-4 bg-green-50 rounded-sm"></div>
                             <span className="text-sm text-gray-600">Tersedia</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <div className="w-4 h-4 border-2 border-pink-500 rounded"></div>
+                            <div className="w-4 h-4 border-2 border-pink-500 rounded-sm"></div>
                             <span className="text-sm text-gray-600">Dipilih</span>
                         </div>
                     </div>

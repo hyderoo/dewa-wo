@@ -155,7 +155,7 @@ const CatalogForm = ({
                         {data.features.map((feature, index) => (
                             <li
                                 key={index}
-                                className="flex items-center justify-between bg-gray-50 p-2 rounded"
+                                className="flex items-center justify-between bg-gray-50 p-2 rounded-sm"
                             >
                                 <span>{feature}</span>
                                 <button

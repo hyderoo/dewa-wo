@@ -8,7 +8,7 @@ export default function TermsConditions({ auth, terms }) {
             <Head title="Terms and Conditions" />
             <BaseLayout auth={auth}>
                 <div className="max-w-4xl mx-auto py-12">
-                    <div className="bg-white shadow overflow-hidden rounded-lg">
+                    <div className="bg-white shadow-sm overflow-hidden rounded-lg">
                         <div className="px-4 py-5 sm:p-6">
                             {/* Render the HTML content safely */}
                             <div dangerouslySetInnerHTML={{ __html: terms.content }} />

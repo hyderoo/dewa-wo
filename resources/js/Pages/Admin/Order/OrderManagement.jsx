@@ -213,7 +213,7 @@ const OrderManagement = () => {
                         onClick={() => !readonly && onRatingChange(star)}
                         disabled={readonly}
                         className={`${star <= rating ? "text-yellow-400" : "text-gray-300"
-                            } focus:outline-none ${!readonly && "hover:text-yellow-400"}`}
+                            } focus:outline-hidden ${!readonly && "hover:text-yellow-400"}`}
                     >
                         <Star className={`w-6 h-6 ${star <= rating ? "fill-yellow-400" : ""}`} />
                     </button>
@@ -288,7 +288,7 @@ const OrderManagement = () => {
                         <div className="mb-4">
                             <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-100 mb-4">
                                 <div className="flex">
-                                    <AlertCircle className="h-5 w-5 text-yellow-600 mr-2 flex-shrink-0" />
+                                    <AlertCircle className="h-5 w-5 text-yellow-600 mr-2 shrink-0" />
                                     <p className="text-sm text-yellow-700">
                                         Pesanan yang dibatalkan tidak dapat dikembalikan. Mohon pastikan kembali tindakan ini.
                                     </p>
@@ -302,7 +302,7 @@ const OrderManagement = () => {
                                 <textarea
                                     value={cancelReason}
                                     onChange={(e) => setCancelReason(e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                     rows="3"
                                     placeholder="Masukkan alasan pembatalan..."
                                     required
@@ -364,7 +364,7 @@ const OrderManagement = () => {
                         <div className="mb-6">
                             <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-4">
                                 <div className="flex">
-                                    <AlertCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0" />
+                                    <AlertCircle className="h-5 w-5 text-blue-600 mr-2 shrink-0" />
                                     <div>
                                         <p className="text-sm text-blue-700 mb-1">
                                             Anda akan menandai pesanan ini sebagai selesai.
@@ -470,7 +470,7 @@ const OrderManagement = () => {
                                 <textarea
                                     value={reviewComment}
                                     onChange={(e) => setReviewComment(e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                     rows="4"
                                     placeholder="Berikan komentar atas pengalaman klien..."
                                     required

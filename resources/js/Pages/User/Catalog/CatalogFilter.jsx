@@ -33,7 +33,7 @@ const CatalogFilter = ({
                             placeholder="Cari paket pernikahan..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 border text-gray-600 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200"
+                            className="w-full pl-10 pr-4 py-3 border text-gray-600 border-gray-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200"
                         />
                     </div>
 
@@ -57,7 +57,7 @@ const CatalogFilter = ({
                         <select
                             value={selectedType}
                             onChange={(e) => setSelectedType(e.target.value)}
-                            className="w-full pl-10 pr-10 py-3 appearance-none border text-gray-600 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 bg-white cursor-pointer"
+                            className="w-full pl-10 pr-10 py-3 appearance-none border text-gray-600 border-gray-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 bg-white cursor-pointer"
                         >
                             {typeOptions.map((option) => (
                                 <option
@@ -96,7 +96,7 @@ const CatalogFilter = ({
                                 Pencarian: {searchTerm}
                                 <button
                                     onClick={() => setSearchTerm("")}
-                                    className="ml-2 focus:outline-none"
+                                    className="ml-2 focus:outline-hidden"
                                 >
                                     <svg
                                         className="h-4 w-4"
@@ -117,7 +117,7 @@ const CatalogFilter = ({
                                 {typeOptions.find((opt) => opt.value === selectedType)?.label}
                                 <button
                                     onClick={() => setSelectedType("all")}
-                                    className="ml-2 focus:outline-none"
+                                    className="ml-2 focus:outline-hidden"
                                 >
                                     <svg
                                         className="h-4 w-4"

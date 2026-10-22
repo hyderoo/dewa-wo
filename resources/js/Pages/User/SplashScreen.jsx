@@ -24,7 +24,7 @@ export default function SplashScreen({ onComplete }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center space-y-6"
+                    className="fixed inset-0 z-9999 bg-white flex flex-col items-center justify-center space-y-6"
                 >
                     <motion.div
                         initial={{ scale: 0.7, opacity: 0 }}

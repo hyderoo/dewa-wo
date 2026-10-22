@@ -131,7 +131,7 @@ export default function Login({ status, canResetPassword, redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -166,7 +166,7 @@ export default function Login({ status, canResetPassword, redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -185,7 +185,7 @@ export default function Login({ status, canResetPassword, redirect }) {
                                         name="remember"
                                         checked={data.remember}
                                         onChange={(e) => setData('remember', e.target.checked)}
-                                        className="h-4 w-4 text-pink-500 focus:ring-pink-400 border-gray-300 rounded"
+                                        className="h-4 w-4 text-pink-500 focus:ring-pink-400 border-gray-300 rounded-sm"
                                     />
                                     <label
                                         htmlFor="remember"
@@ -231,7 +231,7 @@ export default function Login({ status, canResetPassword, redirect }) {
                                     tracking-wide
                                     hover:bg-pink-600
                                     transition-colors
-                                    shadow-sm
+                                    shadow-xs
                                     disabled:opacity-75
                                 "
                             >

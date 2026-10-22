@@ -640,7 +640,7 @@ const OrderForm = () => {
                                                     setShowUserDropdown(true);
                                                 }}
                                                 onFocus={() => setShowUserDropdown(true)}
-                                                className={`w-full pl-10 pr-10 py-2 border ${errors.user_id ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                                className={`w-full pl-10 pr-10 py-2 border ${errors.user_id ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                                 placeholder="Cari pengguna berdasarkan nama atau email"
                                             />
                                             {/* Add clear button to the input */}
@@ -731,7 +731,7 @@ const OrderForm = () => {
                                         type="text"
                                         value={data.client_name}
                                         onChange={e => setData('client_name', e.target.value)}
-                                        className={`w-full px-3 py-2 border ${errors.client_name ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                        className={`w-full px-3 py-2 border ${errors.client_name ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                         placeholder="Contoh: Budi & Sarah"
                                         required
                                     />
@@ -750,7 +750,7 @@ const OrderForm = () => {
                                         onClick={openDatePicker}
                                         className={`
                                             w-full px-3 py-2 border rounded-md text-sm
-                                            focus:outline-none focus:ring-2 text-left
+                                            focus:outline-hidden focus:ring-2 text-left
                                             flex items-center justify-between relative
                                             ${dateError || errors.event_date ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-pink-500'}
                                             ${!data.event_date ? 'text-gray-500' : 'text-gray-900'}
@@ -794,7 +794,7 @@ const OrderForm = () => {
 
                                     {dateError && (
                                         <div className="mt-1 flex items-center text-red-500 text-xs">
-                                            <AlertCircle className="h-3 w-3 mr-1 flex-shrink-0" />
+                                            <AlertCircle className="h-3 w-3 mr-1 shrink-0" />
                                             <span>{dateError}</span>
                                         </div>
                                     )}
@@ -813,7 +813,7 @@ const OrderForm = () => {
                                             type="text"
                                             value={data.venue}
                                             onChange={e => setData('venue', e.target.value)}
-                                            className={`w-full pl-10 px-3 py-2 border ${errors.venue ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                            className={`w-full pl-10 px-3 py-2 border ${errors.venue ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                             placeholder="Contoh: Hotel Grand Ballroom"
                                             required
                                         />
@@ -833,7 +833,7 @@ const OrderForm = () => {
                                             type="number"
                                             value={data.estimated_guests}
                                             onChange={e => setData('estimated_guests', parseInt(e.target.value) || 0)}
-                                            className={`w-full pl-10 px-3 py-2 border ${errors.estimated_guests ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                            className={`w-full pl-10 px-3 py-2 border ${errors.estimated_guests ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                             min="1"
                                             required
                                         />
@@ -857,7 +857,7 @@ const OrderForm = () => {
                                         <select
                                             value={data.catalog_id}
                                             onChange={handleCatalogChange}
-                                            className={`w-full pl-10 px-3 py-2 border ${errors.catalog_id ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                            className={`w-full pl-10 px-3 py-2 border ${errors.catalog_id ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                         >
                                             <option value="">-- Pilih Paket --</option>
                                             {catalogs && catalogs.map(catalog => (
@@ -912,7 +912,7 @@ const OrderForm = () => {
                                                             type="text"
                                                             value={originalPriceFormatted}
                                                             onChange={handleOriginalPriceChange}
-                                                            className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                            className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                             placeholder="50.000.000"
                                                             required
                                                         />
@@ -951,7 +951,7 @@ const OrderForm = () => {
                                                                 type="number"
                                                                 value={discountValueFormatted}
                                                                 onChange={handleDiscountValueChange}
-                                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                                 placeholder="10"
                                                                 min="0"
                                                                 max="100"
@@ -965,7 +965,7 @@ const OrderForm = () => {
                                                                     type="text"
                                                                     value={discountValueFormatted}
                                                                     onChange={handleDiscountValueChange}
-                                                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                                     placeholder="5.000.000"
                                                                 />
                                                             </div>
@@ -981,7 +981,7 @@ const OrderForm = () => {
                                                         type="text"
                                                         value={data.discount_reason}
                                                         onChange={e => setData('discount_reason', e.target.value)}
-                                                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                         placeholder="Contoh: Promo akhir tahun"
                                                     />
                                                 </div>
@@ -1020,7 +1020,7 @@ const OrderForm = () => {
                                                     type="text"
                                                     value={priceFormatted}
                                                     onChange={handlePriceChange}
-                                                    className={`w-full pl-10 pr-3 py-2 border ${errors.price ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                                    className={`w-full pl-10 pr-3 py-2 border ${errors.price ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                                     placeholder="50.000.000"
                                                     required
                                                 />
@@ -1047,7 +1047,7 @@ const OrderForm = () => {
                                                 type="text"
                                                 value={data.down_payment_amount ? formatRupiah(data.down_payment_amount.toString()) : ""}
                                                 onChange={handleDownPaymentChange}
-                                                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                 placeholder="15.000.000"
                                             />
                                         </div>
@@ -1066,7 +1066,7 @@ const OrderForm = () => {
                                             type="text"
                                             value={tempService}
                                             onChange={e => setTempService(e.target.value)}
-                                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             placeholder="Tambah layanan baru"
                                         />
                                         <button
@@ -1082,7 +1082,7 @@ const OrderForm = () => {
                                         {data.included_services && data.included_services.length > 0 ? (
                                             <ul className="space-y-2">
                                                 {data.included_services.map((service, index) => (
-                                                    <li key={index} className="flex justify-between items-center bg-white p-2 rounded">
+                                                    <li key={index} className="flex justify-between items-center bg-white p-2 rounded-sm">
                                                         <span className="text-gray-700">{service}</span>
                                                         <button
                                                             type="button"
@@ -1119,7 +1119,7 @@ const OrderForm = () => {
                                                 {customFeatures.map(feature => (
                                                     <li
                                                         key={feature.id}
-                                                        className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                                                        className="bg-white p-3 rounded-lg shadow-xs hover:shadow-md transition-shadow cursor-pointer"
                                                         onClick={() => handleCustomFeatureSelect(feature)}
                                                     >
                                                         <div className="flex justify-between items-start">
@@ -1150,7 +1150,7 @@ const OrderForm = () => {
                                         {selectedFeatures && selectedFeatures.length > 0 ? (
                                             <ul className="space-y-2">
                                                 {selectedFeatures.map((feature, index) => (
-                                                    <li key={index} className="bg-white p-3 rounded-lg shadow-sm">
+                                                    <li key={index} className="bg-white p-3 rounded-lg shadow-xs">
                                                         <div className="flex justify-between items-start">
                                                             <div>
                                                                 <h4 className="font-medium text-gray-900">

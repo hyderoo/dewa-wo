@@ -21,7 +21,7 @@ export default function Navbar({ auth }) {
     const isLoggedIn = auth && auth.user;
 
     return (
-        <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
+        <nav className="fixed top-0 w-full bg-white shadow-xs z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-24 items-center relative">
                     {/* Logo */}
@@ -112,7 +112,7 @@ export default function Navbar({ auth }) {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMobileMenu}
-                            className="text-gray-800 focus:outline-none"
+                            className="text-gray-800 focus:outline-hidden"
                         >
                             {mobileMenuOpen ? (
                                 <svg

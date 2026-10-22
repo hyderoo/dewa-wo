@@ -48,7 +48,7 @@ const UserPagination = ({ pagination, onPageChange }) => {
                         return (
                             <React.Fragment key={page}>
                                 {showEllipsis && (
-                                    <span className="p-2 border border-gray-300 rounded bg-white text-gray-500">
+                                    <span className="p-2 border border-gray-300 rounded-sm bg-white text-gray-500">
                                         ...
                                     </span>
                                 )}

@@ -32,7 +32,7 @@ const StarRating = ({ rating, onRatingChange, readonly = false }) => {
                     onClick={() => !readonly && onRatingChange(star)}
                     disabled={readonly}
                     className={`${star <= rating ? "text-yellow-400" : "text-gray-300"
-                        } focus:outline-none ${!readonly && "hover:text-yellow-400"}`}
+                        } focus:outline-hidden ${!readonly && "hover:text-yellow-400"}`}
                 >
                     <Star className={`w-6 h-6 ${star <= rating ? "fill-yellow-400" : ""}`} />
                 </button>
@@ -218,7 +218,7 @@ const OrderDetail = ({ order, toast }) => {
 
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-6 text-white">
+                    <div className="bg-linear-to-r from-pink-500 to-rose-500 p-6 text-white">
                         <div className="flex justify-between items-start">
                             <div>
                                 <h1 className="text-2xl font-bold">{order.clientName}</h1>
@@ -311,7 +311,7 @@ const OrderDetail = ({ order, toast }) => {
                                             <p className="text-sm text-gray-500">
                                                 <span className="line-through">{order.formattedOriginalPrice}</span>
                                                 <button
-                                                    className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none text-xs"
+                                                    className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-hidden text-xs"
                                                     onClick={() => setShowDiscountDetails(!showDiscountDetails)}
                                                 >
                                                     {showDiscountDetails ? 'Sembunyikan detail' : 'Lihat detail'}
@@ -324,7 +324,7 @@ const OrderDetail = ({ order, toast }) => {
                                                     <p className="mb-1"><span className="font-medium">Diskon:</span> {order.formattedDiscountAmount} ({order.formattedDiscountPercent})</p>
                                                     <p className="mb-1"><span className="font-medium">Harga Akhir:</span> {order.price}</p>
                                                     {order.discount_reason && (
-                                                        <p className="mt-2 bg-gray-50 p-2 rounded italic">{order.discount_reason}</p>
+                                                        <p className="mt-2 bg-gray-50 p-2 rounded-sm italic">{order.discount_reason}</p>
                                                     )}
                                                 </div>
                                             )}
@@ -435,7 +435,7 @@ const OrderDetail = ({ order, toast }) => {
                                         <ul className="space-y-2">
                                             {order.details.includedServices.map((service, index) => (
                                                 <li key={index} className="flex items-start">
-                                                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 shrink-0" />
                                                     <span>{service}</span>
                                                 </li>
                                             ))}
@@ -461,7 +461,7 @@ const OrderDetail = ({ order, toast }) => {
                                             {order.customFeatures.map((feature, index) => (
                                                 <li key={index} className="flex justify-between items-center">
                                                     <div className="flex items-center">
-                                                        <Tag className="w-4 h-4 text-pink-500 mr-2 flex-shrink-0" />
+                                                        <Tag className="w-4 h-4 text-pink-500 mr-2 shrink-0" />
                                                         <span>{feature.name}</span>
                                                     </div>
                                                     <span className="font-medium text-pink-600">{feature.price}</span>
@@ -548,7 +548,7 @@ const OrderDetail = ({ order, toast }) => {
                         <div className="mb-4">
                             <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-100 mb-4">
                                 <div className="flex">
-                                    <AlertCircle className="h-5 w-5 text-yellow-600 mr-2 flex-shrink-0" />
+                                    <AlertCircle className="h-5 w-5 text-yellow-600 mr-2 shrink-0" />
                                     <p className="text-sm text-yellow-700">
                                         Pesanan yang dibatalkan tidak dapat dikembalikan. Mohon pastikan kembali tindakan ini.
                                     </p>
@@ -562,7 +562,7 @@ const OrderDetail = ({ order, toast }) => {
                                 <textarea
                                     value={cancelReason}
                                     onChange={(e) => setCancelReason(e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                     rows="3"
                                     placeholder="Masukkan alasan pembatalan..."
                                     required
@@ -624,7 +624,7 @@ const OrderDetail = ({ order, toast }) => {
                         <div className="mb-6">
                             <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-4">
                                 <div className="flex">
-                                    <AlertCircle className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0" />
+                                    <AlertCircle className="h-5 w-5 text-blue-600 mr-2 shrink-0" />
                                     <div>
                                         <p className="text-sm text-blue-700 mb-1">
                                             Anda akan menandai pesanan ini sebagai selesai.
@@ -730,7 +730,7 @@ const OrderDetail = ({ order, toast }) => {
                                 <textarea
                                     value={reviewComment}
                                     onChange={(e) => setReviewComment(e.target.value)}
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                     rows="4"
                                     placeholder="Berikan komentar atas pengalaman klien..."
                                     required

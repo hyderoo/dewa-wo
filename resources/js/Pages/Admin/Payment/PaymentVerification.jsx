@@ -298,7 +298,7 @@ const PaymentVerification = () => {
                                 <input
                                     type="text"
                                     placeholder="Cari pembayaran..."
-                                    className="w-full md:w-80 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    className="w-full md:w-80 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
                                 />
                             </div>
                             <div className="flex space-x-2">
@@ -319,7 +319,7 @@ const PaymentVerification = () => {
                                     className={`p-4 hover:bg-gray-50 ${selectedPayment === payment.id ? 'bg-gray-50' : ''}`}
                                 >
                                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                                        <div className="flex-grow">
+                                        <div className="grow">
                                             <div className="flex items-start">
                                                 <div className="p-2 bg-yellow-100 rounded-full mr-4">
                                                     <Clock className="h-6 w-6 text-yellow-600" />
@@ -472,7 +472,7 @@ const PaymentVerification = () => {
                                 </div>
                                 <div>
                                     <nav
-                                        className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+                                        className="relative z-0 inline-flex rounded-md shadow-xs -space-x-px"
                                         aria-label="Pagination"
                                     >
                                         <button

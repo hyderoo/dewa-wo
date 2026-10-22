@@ -231,7 +231,7 @@ const PortfolioModal = ({ isOpen, setIsOpen, editingPortfolio, categories }) => 
                             type="submit"
                             form="portfolioForm"
                             disabled={processing || uploading || (!editingPortfolio && selectedImages.length === 0)}
-                            className="px-6 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
+                            className="px-6 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 focus:outline-hidden focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
                         >
                             <Save className="w-4 h-4 mr-2" />
                             {uploading ? 'Uploading...' : processing ? 'Processing...' : editingPortfolio ? "Update" : "Save"}

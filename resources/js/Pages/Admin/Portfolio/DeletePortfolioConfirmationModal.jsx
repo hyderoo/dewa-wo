@@ -42,7 +42,7 @@ const DeletePortfolioConfirmationModal = ({ isOpen, onClose, portfolio }) => {
                 </h2>
 
                 {error && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4 flex items-center">
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative mb-4 flex items-center">
                         <AlertCircle className="w-5 h-5 mr-2" />
                         <span>{error}</span>
                     </div>
@@ -56,14 +56,14 @@ const DeletePortfolioConfirmationModal = ({ isOpen, onClose, portfolio }) => {
                     <button
                         onClick={onClose}
                         disabled={isDeleting}
-                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
+                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors focus:outline-hidden focus:ring-2 focus:ring-gray-400"
                     >
                         Batal
                     </button>
                     <button
                         onClick={handleConfirmDelete}
                         disabled={isDeleting}
-                        className={`px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-red-400 flex items-center ${isDeleting ? 'opacity-50 cursor-not-allowed' : ''
+                        className={`px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors focus:outline-hidden focus:ring-2 focus:ring-red-400 flex items-center ${isDeleting ? 'opacity-50 cursor-not-allowed' : ''
                             }`}
                     >
                         {isDeleting ? (

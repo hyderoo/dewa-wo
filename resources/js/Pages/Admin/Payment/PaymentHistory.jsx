@@ -409,7 +409,7 @@ const PaymentHistory = () => {
 
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 p-6 text-white">
+                    <div className="bg-linear-to-r from-purple-500 to-indigo-500 p-6 text-white">
                         <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center">
                             <div>
                                 <h1 className="text-2xl font-bold">Riwayat Pembayaran</h1>
@@ -448,7 +448,7 @@ const PaymentHistory = () => {
                             <h2 className="text-lg font-medium text-gray-900">Daftar Pembayaran</h2>
                             <Link
                                 href={route('admin.payments.detail', order.id)}
-                                className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-700 focus:outline-none"
+                                className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-700 focus:outline-hidden"
                             >
                                 <DollarSign className="h-4 w-4 mr-1" />
                                 Tambah Pembayaran
@@ -530,7 +530,7 @@ const PaymentHistory = () => {
                                         {/* Display rejection reason if payment is rejected */}
                                         {payment.status === 'rejected' && payment.note && (
                                             <div className="px-4 py-3 bg-red-50 border-t border-red-200 flex items-start">
-                                                <MessageSquare className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                                                <MessageSquare className="h-5 w-5 text-red-500 mr-2 mt-0.5 shrink-0" />
                                                 <div>
                                                     <p className="text-sm font-medium text-red-800">Alasan Penolakan:</p>
                                                     <p className="text-sm text-red-700">{payment.note}</p>

@@ -57,7 +57,7 @@ export default function HeroSection() {
               text-gray-900
               px-6 sm:px-8 lg:px-10
               py-2 sm:py-3
-              rounded-sm
+              rounded-xs
               text-xs sm:text-sm
               tracking-widest
               uppercase
@@ -76,7 +76,7 @@ export default function HeroSection() {
               text-white
               px-6 sm:px-8 lg:px-10
               py-2 sm:py-3
-              rounded-sm
+              rounded-xs
               text-xs sm:text-sm
               tracking-widest
               uppercase

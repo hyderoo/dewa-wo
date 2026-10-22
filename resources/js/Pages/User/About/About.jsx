@@ -137,7 +137,7 @@ export default function About({ auth }) {
                         </h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             {services.map((service, index) => (
-                                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                                <div key={index} className="bg-white p-6 rounded-lg shadow-xs">
                                     <h3 className={`text-xl mb-4 ${cormorantClass}`}>
                                         {service.title}
                                     </h3>

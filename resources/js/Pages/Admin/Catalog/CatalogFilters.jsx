@@ -45,7 +45,7 @@ const CatalogFilters = ({
                 </div>
 
                 {/* Add Button - Pass this from parent */}
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                     <slot name="addButton" />
                 </div>
             </div>

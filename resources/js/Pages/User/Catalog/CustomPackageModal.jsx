@@ -268,7 +268,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                 placeholder="Cari fitur..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full px-4 py-2 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                className="w-full px-4 py-2 pl-10 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                             />
                             <Search className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" />
                         </div>
@@ -290,7 +290,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                 filteredFeatures.map((feature) => (
                                     <div
                                         key={feature.id}
-                                        className={`bg-white p-4 rounded-lg shadow-sm cursor-pointer transition ${selectedFeatures.find((f) => f.id === feature.id)
+                                        className={`bg-white p-4 rounded-lg shadow-xs cursor-pointer transition ${selectedFeatures.find((f) => f.id === feature.id)
                                             ? "border-2 border-pink-500"
                                             : "border border-gray-200"
                                             }`}
@@ -319,7 +319,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                         </div>
 
                         {/* Selected Features Summary */}
-                        <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
+                        <div className="bg-white p-4 rounded-lg shadow-xs mb-4">
                             <h3 className="text-lg font-semibold text-gray-700 mb-2">
                                 Fitur Yang Dipilih
                             </h3>
@@ -345,7 +345,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                         </div>
 
                         {/* Total Estimation */}
-                        <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <div className="bg-white p-4 rounded-lg shadow-xs">
                             <h3 className="text-lg font-semibold text-gray-700 mb-2">
                                 Estimasi Total
                             </h3>
@@ -384,7 +384,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                         onChange={handleChange}
                                         placeholder="Contoh: Budi & Ani"
                                         required
-                                        className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                        className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                     />
                                     {errors.client_name && (
                                         <p className="text-red-500 text-xs mt-1">{errors.client_name}</p>
@@ -409,7 +409,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             onClick={openDatePicker}
                                             className={`
                                                 w-full px-3 py-2 border rounded-md text-sm
-                                                focus:outline-none focus:ring-2 text-left
+                                                focus:outline-hidden focus:ring-2 text-left
                                                 flex items-center justify-between relative
                                                 ${dateError ? 'border-red-300 focus:ring-red-500' : 'focus:ring-pink-500'}
                                                 ${!formData.event_date ? 'text-gray-500' : 'text-gray-900'}
@@ -453,7 +453,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
 
                                         {dateError && (
                                             <div className="mt-1 flex items-center text-red-500 text-xs">
-                                                <AlertCircle className="h-3 w-3 mr-1 flex-shrink-0" />
+                                                <AlertCircle className="h-3 w-3 mr-1 shrink-0" />
                                                 <span>{dateError}</span>
                                             </div>
                                         )}
@@ -472,7 +472,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             onChange={handleChange}
                                             placeholder="Masukkan perkiraan jumlah tamu"
                                             required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                         {errors.estimated_guests && (
                                             <p className="text-red-500 text-xs mt-1">{errors.estimated_guests}</p>
@@ -489,7 +489,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             onChange={handleChange}
                                             placeholder="Nama gedung/tempat acara"
                                             // required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 mb-2"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500 mb-2"
                                         />
                                         {errors.venue && (
                                             <p className="text-red-500 text-xs mt-1">{errors.venue}</p>
@@ -501,7 +501,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             placeholder="Alamat lengkap lokasi"
                                             rows={2}
                                             //required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                     </div>
                                 </div>
@@ -523,7 +523,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                         {errors.email && (
                                             <p className="text-red-500 text-xs mt-1">{errors.email}</p>
@@ -539,7 +539,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                         {errors.phone && (
                                             <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
@@ -554,7 +554,7 @@ const CustomPackageModal = ({ isOpen, onClose, auth }) => {
                                             name="alt_phone"
                                             value={formData.alt_phone}
                                             onChange={handleChange}
-                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                            className="w-full px-3 py-2 border rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                         />
                                     </div>
                                 </div>

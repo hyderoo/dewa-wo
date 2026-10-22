@@ -294,7 +294,7 @@ const VirtualAccountManagementContent = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-purple-500 to-indigo-600 p-6 md:p-8">
+                    <div className="bg-linear-to-r from-purple-500 to-indigo-600 p-6 md:p-8">
                         <h1 className="text-3xl md:text-4xl font-semibold text-white text-center tracking-wide">
                             Virtual Account Management
                         </h1>
@@ -307,7 +307,7 @@ const VirtualAccountManagementContent = () => {
                     <div className="p-4 md:p-6 bg-gray-50 border-b border-gray-200">
                         <button
                             onClick={() => openModal()}
-                            className="w-full md:w-auto bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                            className="w-full md:w-auto bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors focus:outline-hidden focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                         >
                             + Add New Virtual Account
                         </button>
@@ -324,7 +324,7 @@ const VirtualAccountManagementContent = () => {
                                     <div className="p-6">
                                         {va.is_active && (
                                             <div className="mb-2">
-                                                <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                                                <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm">
                                                     Active
                                                 </span>
                                             </div>
@@ -401,7 +401,7 @@ const VirtualAccountManagementContent = () => {
                                 <div className="mt-6">
                                     <button
                                         onClick={() => openModal()}
-                                        className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                                        className="inline-flex items-center px-4 py-2 border border-transparent shadow-xs text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                                     >
                                         + Add New Virtual Account
                                     </button>
@@ -442,7 +442,7 @@ const VirtualAccountManagementContent = () => {
                                         name="bank_code"
                                         value={data.bank_code}
                                         onChange={handleInputChange}
-                                        className={`w-full px-3 py-2 border ${errors.bank_code ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500`}
+                                        className={`w-full px-3 py-2 border ${errors.bank_code ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-purple-500`}
                                         placeholder="e.g., bca, bni, mandiri"
                                     />
                                     {errors.bank_code && (
@@ -460,7 +460,7 @@ const VirtualAccountManagementContent = () => {
                                         name="name"
                                         value={data.name}
                                         onChange={handleInputChange}
-                                        className={`w-full px-3 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500`}
+                                        className={`w-full px-3 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-purple-500`}
                                         placeholder="Enter name (e.g., BCA Virtual Account)"
                                     />
                                     {errors.name && (
@@ -478,7 +478,7 @@ const VirtualAccountManagementContent = () => {
                                         name="account_number"
                                         value={data.account_number}
                                         onChange={handleInputChange}
-                                        className={`w-full px-3 py-2 border ${errors.account_number ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500`}
+                                        className={`w-full px-3 py-2 border ${errors.account_number ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-purple-500`}
                                         placeholder="Virtual Account number (if fixed)"
                                     />
                                     {errors.account_number && (
@@ -519,7 +519,7 @@ const VirtualAccountManagementContent = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => fileInputRef.current.click()}
-                                                className="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 inline-flex items-center"
+                                                className="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-hidden focus:ring-2 focus:ring-purple-500 inline-flex items-center"
                                             >
                                                 <Upload className="w-4 h-4 mr-2" />
                                                 Browse Logo
@@ -545,7 +545,7 @@ const VirtualAccountManagementContent = () => {
                                         name="description"
                                         value={data.description}
                                         onChange={handleInputChange}
-                                        className={`w-full px-3 py-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500`}
+                                        className={`w-full px-3 py-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-hidden focus:ring-2 focus:ring-purple-500`}
                                         rows="3"
                                         placeholder="Optional description of this virtual account"
                                     ></textarea>
@@ -563,7 +563,7 @@ const VirtualAccountManagementContent = () => {
                                         <button
                                             type="button"
                                             onClick={addInstruction}
-                                            className="inline-flex items-center px-2 py-1 text-xs font-medium rounded text-purple-700 bg-purple-100 hover:bg-purple-200"
+                                            className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-sm text-purple-700 bg-purple-100 hover:bg-purple-200"
                                         >
                                             <Plus className="w-3 h-3 mr-1" />
                                             Add Step
@@ -584,7 +584,7 @@ const VirtualAccountManagementContent = () => {
                                                             placeholder="Step title (e.g., Open Mobile Banking)"
                                                             value={instruction.step}
                                                             onChange={(e) => handleInstructionChange(index, 'step', e.target.value)}
-                                                            className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
+                                                            className="w-full px-2 py-1 text-sm border border-gray-300 rounded-sm"
                                                         />
                                                     </div>
                                                     <div>
@@ -592,7 +592,7 @@ const VirtualAccountManagementContent = () => {
                                                             placeholder="Detailed instruction"
                                                             value={instruction.instruction}
                                                             onChange={(e) => handleInstructionChange(index, 'instruction', e.target.value)}
-                                                            className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
+                                                            className="w-full px-2 py-1 text-sm border border-gray-300 rounded-sm"
                                                             rows="2"
                                                         ></textarea>
                                                     </div>
@@ -601,7 +601,7 @@ const VirtualAccountManagementContent = () => {
                                                     <button
                                                         type="button"
                                                         onClick={() => removeInstruction(index)}
-                                                        className="mt-1 p-1 text-red-500 hover:bg-red-100 rounded"
+                                                        className="mt-1 p-1 text-red-500 hover:bg-red-100 rounded-sm"
                                                     >
                                                         <Trash className="w-4 h-4" />
                                                     </button>
@@ -619,7 +619,7 @@ const VirtualAccountManagementContent = () => {
                                         name="is_active"
                                         checked={data.is_active}
                                         onChange={handleInputChange}
-                                        className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                                        className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded-sm"
                                     />
                                     <label htmlFor="is_active" className="ml-2 block text-sm text-gray-700">
                                         Active
@@ -643,7 +643,7 @@ const VirtualAccountManagementContent = () => {
                                     type="submit"
                                     form="vaForm"
                                     disabled={processing || uploading}
-                                    className="px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
+                                    className="px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-hidden focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed inline-flex items-center"
                                 >
                                     <Save className="w-4 h-4 mr-2" />
                                     {uploading ? 'Uploading...' : processing ? 'Processing...' : editingVA ? "Update" : "Add"}

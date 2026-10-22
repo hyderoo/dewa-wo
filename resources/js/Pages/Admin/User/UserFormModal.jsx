@@ -347,7 +347,7 @@ const UserFormModal = ({ user, onClose, onSave }) => {
                             value={name}
                             onChange={(e) => handleInputChange(e, 'name')}
                             onBlur={() => handleBlur('name')}
-                            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${touched.name && errors.name ? "border-red-500" : touched.name && !errors.name ? "border-green-500" : "border-gray-300"
+                            className={`w-full px-3 py-2 border rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 ${touched.name && errors.name ? "border-red-500" : touched.name && !errors.name ? "border-green-500" : "border-gray-300"
                                 }`}
                         />
                         {touched.name && errors.name && (
@@ -364,7 +364,7 @@ const UserFormModal = ({ user, onClose, onSave }) => {
                                 value={phone}
                                 onChange={handlePhoneChange}
                                 onBlur={() => handleBlur('phone')}
-                                className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${touched.phone && errors.phone ? "border-red-500" : touched.phone && !errors.phone ? "border-green-500" : "border-gray-300"
+                                className={`w-full px-3 py-2 border rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 ${touched.phone && errors.phone ? "border-red-500" : touched.phone && !errors.phone ? "border-green-500" : "border-gray-300"
                                     }`}
                                 placeholder="123-456-7890"
                             />
@@ -388,7 +388,7 @@ const UserFormModal = ({ user, onClose, onSave }) => {
                                 value={email}
                                 onChange={(e) => handleInputChange(e, 'email')}
                                 onBlur={() => handleBlur('email')}
-                                className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${touched.email && errors.email ? "border-red-500" : touched.email && !errors.email ? "border-green-500" : "border-gray-300"
+                                className={`w-full px-3 py-2 border rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 ${touched.email && errors.email ? "border-red-500" : touched.email && !errors.email ? "border-green-500" : "border-gray-300"
                                     }`}
                                 placeholder="user@example.com"
                             />
@@ -405,7 +405,7 @@ const UserFormModal = ({ user, onClose, onSave }) => {
                         <select
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="user">User</option>
                             <option value="admin">Admin</option>
@@ -422,7 +422,7 @@ const UserFormModal = ({ user, onClose, onSave }) => {
                                 value={password}
                                 onChange={(e) => handleInputChange(e, 'password')}
                                 onBlur={() => handleBlur('password')}
-                                className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${touched.password && errors.password ? "border-red-500" : (touched.password && password && !errors.password) ? "border-green-500" : "border-gray-300"
+                                className={`w-full px-3 py-2 border rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 ${touched.password && errors.password ? "border-red-500" : (touched.password && password && !errors.password) ? "border-green-500" : "border-gray-300"
                                     }`}
                             />
                             <button

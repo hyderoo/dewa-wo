@@ -127,7 +127,7 @@ export default function Register({ redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -162,7 +162,7 @@ export default function Register({ redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -197,7 +197,7 @@ export default function Register({ redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -232,7 +232,7 @@ export default function Register({ redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -267,7 +267,7 @@ export default function Register({ redirect }) {
                                         border
                                         border-gray-200
                                         rounded-md
-                                        focus:outline-none
+                                        focus:outline-hidden
                                         focus:ring-2
                                         focus:ring-pink-200
                                         focus:border-pink-300
@@ -298,7 +298,7 @@ export default function Register({ redirect }) {
                                     tracking-wide
                                     hover:bg-pink-600
                                     transition-colors
-                                    shadow-sm
+                                    shadow-xs
                                     disabled:opacity-75
                                 "
                             >

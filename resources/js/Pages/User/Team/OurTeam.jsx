@@ -171,28 +171,28 @@ export default function OurTeam({ team, auth }) {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                             <div className="flex items-start space-x-4">
-                                <MapPin className="text-pink-600 w-6 h-6 flex-shrink-0" />
+                                <MapPin className="text-pink-600 w-6 h-6 shrink-0" />
                                 <div>
                                     <h3 className="font-semibold mb-2">Lokasi</h3>
                                     <p className="text-gray-600 text-sm">{contactInfo.address}</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <Phone className="text-pink-600 w-6 h-6 flex-shrink-0" />
+                                <Phone className="text-pink-600 w-6 h-6 shrink-0" />
                                 <div>
                                     <h3 className="font-semibold mb-2">Telepon</h3>
                                     <p className="text-gray-600 text-sm">{contactInfo.phone}</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <Mail className="text-pink-600 w-6 h-6 flex-shrink-0" />
+                                <Mail className="text-pink-600 w-6 h-6 shrink-0" />
                                 <div>
                                     <h3 className="font-semibold mb-2">Email</h3>
                                     <p className="text-gray-600 text-sm">{contactInfo.email}</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <Clock className="text-pink-600 w-6 h-6 flex-shrink-0" />
+                                <Clock className="text-pink-600 w-6 h-6 shrink-0" />
                                 <div>
                                     <h3 className="font-semibold mb-2">Jam Operasional</h3>
                                     <p className="text-gray-600 text-sm">{contactInfo.hours}</p>

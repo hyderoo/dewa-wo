@@ -318,7 +318,7 @@ const Status = ({ payment, auth }) => {
                                     }`}
                             >
                                 <div className="flex">
-                                    <div className="flex-shrink-0">
+                                    <div className="shrink-0">
                                         {toastMessage.type === "success" ? (
                                             <CheckCircle className="h-5 w-5 text-green-500" />
                                         ) : toastMessage.type === "error" ? (
@@ -347,7 +347,7 @@ const Status = ({ payment, auth }) => {
                                         <div className="-mx-1.5 -my-1.5">
                                             <button
                                                 onClick={() => setShowToast(false)}
-                                                className="inline-flex rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                                                className="inline-flex rounded-md p-1.5 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                                             >
                                                 <XCircle className="h-5 w-5 text-gray-500" />
                                             </button>
@@ -367,7 +367,7 @@ const Status = ({ payment, auth }) => {
                             </Link>
                         </div>
 
-                        <div className="bg-white overflow-hidden shadow-sm rounded-xl">
+                        <div className="bg-white overflow-hidden shadow-xs rounded-xl">
                             <div className="p-8 text-center">
                                 {getStatusIcon()}
 

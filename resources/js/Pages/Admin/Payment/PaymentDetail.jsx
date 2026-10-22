@@ -276,7 +276,7 @@ const PaymentDetail = () => {
 
                 <div className="bg-white rounded-lg shadow-lg">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-6 text-white rounded-t-lg">
+                    <div className="bg-linear-to-r from-pink-500 to-rose-500 p-6 text-white rounded-t-lg">
                         <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center">
                             <div>
                                 <h1 className="text-2xl font-bold">Proses Pembayaran</h1>
@@ -412,7 +412,7 @@ const PaymentDetail = () => {
                                             <select
                                                 value={data.payment_type}
                                                 onChange={(e) => setData('payment_type', e.target.value)}
-                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                             >
                                                 {order.requires_down_payment && (
                                                     <option value="down_payment">Uang Muka</option>
@@ -432,7 +432,7 @@ const PaymentDetail = () => {
                                                     type="text"
                                                     value={amountFormatted}
                                                     onChange={handleAmountChange}
-                                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                     placeholder="0"
                                                     required
                                                 />
@@ -602,7 +602,7 @@ const PaymentDetail = () => {
 
                                         <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                                             <div className="flex items-start">
-                                                <AlertCircle className="h-5 w-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                                                <AlertCircle className="h-5 w-5 text-blue-500 mr-3 mt-1 shrink-0" />
                                                 <div>
                                                     <p className="font-medium text-blue-700">Informasi Virtual Account</p>
                                                     <p className="text-sm text-blue-600 mt-1">
@@ -619,7 +619,7 @@ const PaymentDetail = () => {
                                 {selectedMethod === "cash" && (
                                     <div className="mb-6 p-4 bg-green-50 rounded-lg">
                                         <div className="flex items-start">
-                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 shrink-0" />
                                             <div>
                                                 <p className="font-medium text-green-700">Informasi Pembayaran Tunai</p>
                                                 <p className="text-sm text-green-600 mt-1">

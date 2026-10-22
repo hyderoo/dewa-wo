@@ -120,7 +120,7 @@ const OrderManagementContent = () => {
                         onClick={() => !readonly && onRatingChange(star)}
                         disabled={readonly}
                         className={`${star <= rating ? "text-yellow-400" : "text-gray-300"
-                            } focus:outline-none ${!readonly && "hover:text-yellow-400"}`}
+                            } focus:outline-hidden ${!readonly && "hover:text-yellow-400"}`}
                     >
                         <Star className="w-6 h-6 fill-current" />
                     </button>
@@ -167,21 +167,21 @@ const OrderManagementContent = () => {
             </div>
 
             {/* Filters and Search */}
-            <div className="bg-white rounded-lg shadow mb-6">
+            <div className="bg-white rounded-lg shadow-sm mb-6">
                 <div className="p-4 flex flex-col md:flex-row gap-4 items-center justify-between">
                     <div className="w-full md:w-96 relative">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                         <input
                             type="text"
                             placeholder="Cari berdasarkan nama client..."
-                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </div>
                     <div className="flex gap-4 w-full md:w-auto">
                         <select
-                            className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white"
+                            className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500 bg-white"
                             value={selectedStatus}
                             onChange={(e) => setSelectedStatus(e.target.value)}
                         >
@@ -287,7 +287,7 @@ const OrderManagementContent = () => {
                             </div>
                         ))
                 ) : (
-                    <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow p-8 text-center">
+                    <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-sm p-8 text-center">
                         <AlertTriangle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                         <h3 className="text-lg font-medium text-gray-900 mb-1">Tidak ada pesanan ditemukan</h3>
                         <p className="text-gray-500 mb-6">
@@ -417,7 +417,7 @@ const OrderManagementContent = () => {
                                                 onChange={(e) => setData('comment', e.target.value)}
                                                 rows="3"
                                                 className={`w-full px-3 py-2 border ${errors.comment ? 'border-red-500' : 'border-gray-300'
-                                                    } rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500`}
+                                                    } rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500`}
                                                 placeholder="Berikan komentar atau ulasan tentang layanan yang diberikan..."
                                             ></textarea>
                                             {errors.comment && (

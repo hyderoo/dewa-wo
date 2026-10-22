@@ -92,7 +92,7 @@ const DashboardContent = () => {
                     </div>
                     <div className="mt-4 md:mt-0">
                         <select
-                            className="bg-white border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            className="bg-white border border-gray-300 px-4 py-2 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                             value={timeRange}
                             onChange={handleTimeRangeChange}
                         >
@@ -107,7 +107,7 @@ const DashboardContent = () => {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Total Revenue */}
-                    <div className="bg-white rounded-xl shadow-sm p-6">
+                    <div className="bg-white rounded-xl shadow-xs p-6">
                         <div className="flex items-center justify-between">
                             <h3 className="text-gray-500">Total Pendapatan</h3>
                             <span
@@ -128,7 +128,7 @@ const DashboardContent = () => {
                     </div>
 
                     {/* Total Orders */}
-                    <div className="bg-white rounded-xl shadow-sm p-6">
+                    <div className="bg-white rounded-xl shadow-xs p-6">
                         <h3 className="text-gray-500">Total Pesanan</h3>
                         <p className="text-2xl font-semibold mt-2">
                             {analyticsData?.orders?.total || 0}
@@ -145,7 +145,7 @@ const DashboardContent = () => {
                     </div>
 
                     {/* Average Order Value */}
-                    <div className="bg-white rounded-xl shadow-sm p-6">
+                    <div className="bg-white rounded-xl shadow-xs p-6">
                         <h3 className="text-gray-500">Rata-rata Nilai Pesanan</h3>
                         <p className="text-2xl font-semibold mt-2">
                             {formatCurrency(averageOrderValue)}
@@ -154,7 +154,7 @@ const DashboardContent = () => {
                     </div>
 
                     {/* Conversion Rate */}
-                    <div className="bg-white rounded-xl shadow-sm p-6">
+                    <div className="bg-white rounded-xl shadow-xs p-6">
                         <h3 className="text-gray-500">Tingkat Konversi</h3>
                         <p className="text-2xl font-semibold mt-2">{conversionRate}%</p>
                         <p className="text-sm text-gray-500 mt-1">Pesanan selesai</p>
@@ -164,7 +164,7 @@ const DashboardContent = () => {
                 {/* Visual Representations Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Monthly Revenue Visualization */}
-                    <div className="bg-white rounded-xl shadow-sm p-6">
+                    <div className="bg-white rounded-xl shadow-xs p-6">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-lg font-semibold text-gray-800">
                                 Pendapatan Bulanan
@@ -268,7 +268,7 @@ const DashboardContent = () => {
                 </div>
 
                 {/* Package Distribution */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
+                <div className="bg-white rounded-xl shadow-xs p-6">
                     <h2 className="text-lg font-semibold text-gray-800 mb-4">
                         Distribusi Paket
                     </h2>
@@ -306,7 +306,7 @@ const DashboardContent = () => {
                 </div>
 
                 {/* Package Performance */}
-                <div className="bg-white rounded-xl shadow-sm">
+                <div className="bg-white rounded-xl shadow-xs">
                     <div className="p-6 border-b border-gray-100">
                         <h2 className="text-lg font-semibold text-gray-800">
                             Performa Paket Layanan
@@ -347,7 +347,7 @@ const DashboardContent = () => {
                 </div>
 
                 {/* Recent Orders */}
-                <div className="bg-white rounded-xl shadow-sm">
+                <div className="bg-white rounded-xl shadow-xs">
                     <div className="p-6 border-b border-gray-100">
                         <h2 className="text-lg font-semibold text-gray-800">
                             Pesanan Terbaru

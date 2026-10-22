@@ -5,7 +5,7 @@ const CatalogFilterBar = ({ searchTerm, setSearchTerm, selectedType, setSelected
     return (
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             {/* Search Field */}
-            <div className="relative flex-grow max-w-md">
+            <div className="relative grow max-w-md">
                 <input
                     type="text"
                     placeholder="Cari layanan..."
@@ -20,12 +20,12 @@ const CatalogFilterBar = ({ searchTerm, setSearchTerm, selectedType, setSelected
 
             {/* Type Filter */}
             <div className="flex items-center space-x-2">
-                <div className="flex items-center bg-white rounded-lg shadow-sm px-2 border border-gray-200">
+                <div className="flex items-center bg-white rounded-lg shadow-xs px-2 border border-gray-200">
                     <Filter className="w-4 h-4 text-gray-400" />
                     <select
                         value={selectedType}
                         onChange={(e) => setSelectedType(e.target.value)}
-                        className="py-2 px-3 border-0 bg-transparent text-gray-700 focus:outline-none focus:ring-0"
+                        className="py-2 px-3 border-0 bg-transparent text-gray-700 focus:outline-hidden focus:ring-0"
                     >
                         <option value="all">Semua Tipe</option>
                         {serviceTypes.map((type) => (
@@ -40,7 +40,7 @@ const CatalogFilterBar = ({ searchTerm, setSearchTerm, selectedType, setSelected
                         setSelectedType("all");
                         setSearchTerm("");
                     }}
-                    className="p-2 bg-white rounded-lg shadow-sm border border-gray-200"
+                    className="p-2 bg-white rounded-lg shadow-xs border border-gray-200"
                     title="Reset filter"
                 >
                     <RefreshCw className="w-4 h-4 text-gray-500" />

@@ -111,7 +111,7 @@ const ReviewDialog = ({ show, onClose, order }) => {
                                                 rows="4"
                                                 value={data.comment}
                                                 onChange={(e) => setData("comment", e.target.value)}
-                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-pink-500"
                                                 placeholder="Bagikan pengalaman Anda bekerja dengan kami..."
                                             ></textarea>
                                             {errors.comment && (
@@ -158,7 +158,7 @@ const ConfirmationDialog = ({ show, onClose, onConfirm, title, message, confirmL
                 <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                         <div className="sm:flex sm:items-start">
-                            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 sm:mx-0 sm:h-10 sm:w-10">
+                            <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-100 sm:mx-0 sm:h-10 sm:w-10">
                                 <AlertTriangle className="h-6 w-6 text-yellow-600" />
                             </div>
                             <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -176,7 +176,7 @@ const ConfirmationDialog = ({ show, onClose, onConfirm, title, message, confirmL
                     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                         <button
                             type="button"
-                            className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto disabled:opacity-50"
+                            className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-green-500 sm:ml-3 sm:w-auto disabled:opacity-50"
                             onClick={onConfirm}
                             disabled={isProcessing}
                         >
@@ -184,7 +184,7 @@ const ConfirmationDialog = ({ show, onClose, onConfirm, title, message, confirmL
                         </button>
                         <button
                             type="button"
-                            className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                            className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                             onClick={onClose}
                         >
                             Batalkan
@@ -306,7 +306,7 @@ const Order = () => {
             <BaseLayout auth={auth}>
                 <div className="py-12 bg-gray-50">
                     <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                        <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <div className="bg-white overflow-hidden shadow-xs sm:rounded-lg">
                             <div className="p-6">
                                 {/* Tabs */}
                                 <div className="border-b border-gray-200 mb-6">
@@ -507,7 +507,7 @@ const Order = () => {
                                         <div className="mt-6">
                                             <Link
                                                 href={route("features")}
-                                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-xs text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                             >
                                                 Lihat Katalog Layanan
                                             </Link>

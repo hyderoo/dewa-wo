@@ -128,7 +128,7 @@ const SpecialFeatures = ({ services }) => {
                         </h2>
                         <div className="grid md:grid-cols-2 gap-8">
                             {additionalServices.map((service, index) => (
-                                <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
+                                <div key={index} className="bg-white p-8 rounded-lg shadow-xs">
                                     <h3 className={`text-2xl mb-4 ${cormorantClass}`}>
                                         {service.title}
                                     </h3>

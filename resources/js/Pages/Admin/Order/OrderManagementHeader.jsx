@@ -4,7 +4,7 @@ import { PlusCircle, FileText, DollarSign, Calendar } from "lucide-react";
 const OrderManagementHeader = ({ title, subtitle, pendingCount, completedCount, onCreateOrder }) => {
     return (
         <div className="relative overflow-hidden mb-8">
-            <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-6 md:p-8 rounded-2xl shadow-xl">
+            <div className="bg-linear-to-r from-pink-500 to-rose-500 p-6 md:p-8 rounded-2xl shadow-xl">
                 <div className="relative z-10">
                     <h1 className="font-cormorant text-3xl md:text-4xl font-light text-white text-center tracking-wide">
                         {title || "Manajemen Pesanan"}
@@ -23,7 +23,7 @@ const OrderManagementHeader = ({ title, subtitle, pendingCount, completedCount, 
                         </button>
 
                         {pendingCount > 0 && (
-                            <div className="inline-flex items-center px-4 py-2 bg-white/20 text-white rounded-lg backdrop-blur-sm">
+                            <div className="inline-flex items-center px-4 py-2 bg-white/20 text-white rounded-lg backdrop-blur-xs">
                                 <Calendar className="w-4 h-4 mr-2" />
                                 <span>{pendingCount} pesanan menunggu pembayaran</span>
                             </div>
@@ -32,13 +32,13 @@ const OrderManagementHeader = ({ title, subtitle, pendingCount, completedCount, 
 
                     {(pendingCount > 0 || completedCount > 0) && (
                         <div className="flex justify-center mt-6 gap-3">
-                            <div className="inline-flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                            <div className="inline-flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-xs">
                                 <div className="flex gap-2 items-center">
                                     <div className="h-2 w-2 rounded-full bg-yellow-300"></div>
                                     <span className="text-white text-sm font-medium">Pending: {pendingCount || 0}</span>
                                 </div>
                             </div>
-                            <div className="inline-flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                            <div className="inline-flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-xs">
                                 <div className="flex gap-2 items-center">
                                     <div className="h-2 w-2 rounded-full bg-green-300"></div>
                                     <span className="text-white text-sm font-medium">Completed: {completedCount || 0}</span>

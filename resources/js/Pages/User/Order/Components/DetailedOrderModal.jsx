@@ -197,7 +197,7 @@ const DetailedOrderModal = ({ order, onClose, onPayment, onCancel }) => {
                                     order.details.map((detail, index) => (
                                         <li key={index} className="flex items-start text-gray-600">
                                             <svg
-                                                className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-0.5"
+                                                className="h-5 w-5 mr-2 text-green-500 shrink-0 mt-0.5"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -258,7 +258,7 @@ const DetailedOrderModal = ({ order, onClose, onPayment, onCancel }) => {
                                         >
                                             <div className="flex items-start flex-1">
                                                 <svg
-                                                    className="h-5 w-5 mr-2 text-pink-500 flex-shrink-0 mt-0.5"
+                                                    className="h-5 w-5 mr-2 text-pink-500 shrink-0 mt-0.5"
                                                     fill="none"
                                                     stroke="currentColor"
                                                     viewBox="0 0 24 24"

@@ -4,7 +4,7 @@ import { Search, RefreshCw } from "lucide-react";
 const FeatureFilterBar = ({ searchTerm, setSearchTerm }) => {
     return (
         <div className="flex items-center space-x-2">
-            <div className="relative flex-grow">
+            <div className="relative grow">
                 <input
                     type="text"
                     placeholder="Cari fitur..."
@@ -19,7 +19,7 @@ const FeatureFilterBar = ({ searchTerm, setSearchTerm }) => {
             {searchTerm && (
                 <button
                     onClick={() => setSearchTerm("")}
-                    className="p-2 bg-white rounded-lg shadow-sm border border-gray-200"
+                    className="p-2 bg-white rounded-lg shadow-xs border border-gray-200"
                     title="Reset filter"
                 >
                     <RefreshCw className="w-4 h-4 text-gray-500" />

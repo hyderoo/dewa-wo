@@ -193,7 +193,7 @@ const CustomFeatureManagementContent = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-purple-500 to-indigo-600 p-6 md:p-8">
+                    <div className="bg-linear-to-r from-purple-500 to-indigo-600 p-6 md:p-8">
                         <h1 className="font-cormorant text-3xl md:text-4xl font-light text-white text-center tracking-wide">
                             Manajemen Fitur Custom
                         </h1>
@@ -207,7 +207,7 @@ const CustomFeatureManagementContent = () => {
                         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
                             <button
                                 onClick={handleAddNew}
-                                className="w-full md:w-auto bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                className="w-full md:w-auto bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors focus:outline-hidden focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                             >
                                 <Plus className="w-4 h-4 mr-2 inline-block" />
                                 Tambah Fitur Baru
@@ -256,7 +256,7 @@ const CustomFeatureManagementContent = () => {
                                     />
                                 ))
                             ) : (
-                                <div className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center bg-white rounded-lg shadow p-8">
+                                <div className="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center bg-white rounded-lg shadow-sm p-8">
                                     <AlertCircle className="h-12 w-12 text-gray-400 mb-4" />
                                     <h3 className="text-lg font-medium text-gray-900 mb-1">Tidak ada fitur ditemukan</h3>
                                     <p className="text-gray-500 text-center mb-4">
@@ -268,7 +268,7 @@ const CustomFeatureManagementContent = () => {
                                         {searchTerm && (
                                             <button
                                                 onClick={() => setSearchTerm("")}
-                                                className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                                                className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-xs text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
                                             >
                                                 <svg className="-ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -278,7 +278,7 @@ const CustomFeatureManagementContent = () => {
                                         )}
                                         <button
                                             onClick={handleAddNew}
-                                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-xs text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                                         >
                                             <Plus className="-ml-1 mr-2 h-4 w-4" />
                                             Tambah Fitur Baru
